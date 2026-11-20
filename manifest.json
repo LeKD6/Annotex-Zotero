@@ -1,0 +1,11 @@
+{
+  "manifest_version": 2,
+  "name": "Annotex for Zotero (Open Source RC)",
+  "version": "0.4.0rc8",
+  "description": "Local reading notes and source-linked writing packets, with optional user-configured AI.",
+  "author": "Kolbe A. Dumas",
+  "icons": { "48": "icons/annotex.svg", "96": "icons/annotex.svg" },
+  "applications": {
+    "zotero": { "id": "annotex-open@annotex.app", "update_url": "https://raw.githubusercontent.com/LeKD6/Annotex-Zotero/main/updates.json", "strict_min_version": "10.0", "strict_max_version": "10.0.*" }
+  }
+}

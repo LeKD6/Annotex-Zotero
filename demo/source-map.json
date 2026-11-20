@@ -1,0 +1,60 @@
+{
+  "schema": "annotex-writing-packet/v1",
+  "createdAt": "2026-11-20T16:42:36.930Z",
+  "coverage": "Saved passages and notes only. Review originals before citing.",
+  "bibliographyTranslator": "BibTeX",
+  "readings": [
+    {
+      "citation": {
+        "title": "Synthetic institutions and incentives",
+        "authors": [
+          "Test Researcher"
+        ],
+        "date": "2026",
+        "publication": "Synthetic Research Fixture",
+        "DOI": "",
+        "url": "",
+        "itemKey": "RW3MUVQU",
+        "libraryID": 1,
+        "zoteroURI": "http://zotero.org/users/local/GzFZ9tGV/items/RW3MUVQU",
+        "link": "zotero://select/library/items/RW3MUVQU"
+      },
+      "tags": [],
+      "snapshot": "91efd6f73adb0bd2ff4c35e45d7b13dc",
+      "sources": [
+        {
+          "id": "1:3INH8I4T:UIGKLL5L",
+          "kind": "annotation",
+          "libraryID": 1,
+          "itemKey": "RW3MUVQU",
+          "attachmentKey": "3INH8I4T",
+          "annotationKey": "UIGKLL5L",
+          "pageLabel": "1",
+          "pageIndex": 0,
+          "excerpt": "Institutions shape incentives, and incentives influence political behavior.",
+          "humanNote": "My interpretation: this is a proposed mechanism, not an identified effect. Revised after checking the source.",
+          "aiNote": "",
+          "uncertainNote": "",
+          "origin": "source-and-user-note",
+          "link": "zotero://open-pdf/library/items/3INH8I4T?page=1&annotation=UIGKLL5L"
+        }
+      ],
+      "readingNotes": [
+        {
+          "key": "536TF6DY",
+          "link": "zotero://select/library/items/536TF6DY",
+          "html": "<h1>Reading note: Synthetic institutions and incentives</h1><p>Test Researcher (2026). <a href=\"zotero://select/library/items/RW3MUVQU\">Open reading in Zotero</a></p><p>Created 2026-11-20. Based on 1 saved passages/notes, not a full-paper read. Record your reading depth below.</p><h2>Question or chapter</h2><p>[My question, project and theme]</p><h2>Reading depth</h2><p>[Full text / selected sections / abstract / cited by another work]</p><h2>Author's argument</h2><p>[What the author claims, and why]</p><h2>Evidence and method</h2><p>[Setting, actors, method and finding; or premises and theoretical argument]</p><h2>My interpretation</h2><p>[Why this matters for my question, in my own words]</p><h2>Connections and limits</h2><p>[Agrees with, challenges or extends; contradictions and unresolved questions]</p><h2>Possible use in my paper</h2><p>[Definition / mechanism / expectation / competing explanation / measurement / design / context]</p><h2>Evidence from my library</h2><p><a href=\"zotero://open-pdf/library/items/3INH8I4T?page=1&amp;annotation=UIGKLL5L\">Page 1</a></p>\n<blockquote>Institutions shape incentives, and incentives influence political behavior.</blockquote>\n<p><strong>Saved source note:</strong> My interpretation: this is a proposed mechanism, not an identified effect.</p><h2>Draft claim</h2><p>Institutional incentives may shape political behavior. This synthetic excerpt proposes a mechanism, not a causal estimate.</p>",
+          "text": "Reading note: Synthetic institutions and incentives\nTest Researcher (2026). Open reading in Zotero\nCreated 2026-11-20. Based on 1 saved passages/notes, not a full-paper read. Record your reading depth below.\nQuestion or chapter\n[My question, project and theme]\nReading depth\n[Full text / selected sections / abstract / cited by another work]\nAuthor's argument\n[What the author claims, and why]\nEvidence and method\n[Setting, actors, method and finding; or premises and theoretical argument]\nMy interpretation\n[Why this matters for my question, in my own words]\nConnections and limits\n[Agrees with, challenges or extends; contradictions and unresolved questions]\nPossible use in my paper\n[Definition / mechanism / expectation / competing explanation / measurement / design / context]\nEvidence from my library\nPage 1\n\nInstitutions shape incentives, and incentives influence political behavior.\n\nSaved source note: My interpretation: this is a proposed mechanism, not an identified effect.\nDraft claim\nInstitutional incentives may shape political behavior. This synthetic excerpt proposes a mechanism, not a causal estimate.",
+          "reviewState": "sources-changed"
+        },
+        {
+          "key": "WDVNEQWU",
+          "link": "zotero://select/library/items/WDVNEQWU",
+          "html": "<h1>Reading note: Synthetic institutions and incentives</h1><p>Test Researcher (2026). <a href=\"zotero://select/library/items/RW3MUVQU\">Open reading in Zotero</a></p><p>Created 2026-11-20. Based on 1 saved passages/notes, not a full-paper read. Record your reading depth below.</p><h2>Question or chapter</h2><p>[My question, project and theme]</p><h2>Reading depth</h2><p>[Full text / selected sections / abstract / cited by another work]</p><h2>Author's argument</h2><p>[What the author claims, and why]</p><h2>Evidence and method</h2><p>[Setting, actors, method and finding; or premises and theoretical argument]</p><h2>My interpretation</h2><p>[Why this matters for my question, in my own words]</p><h2>Connections and limits</h2><p>[Agrees with, challenges or extends; contradictions and unresolved questions]</p><h2>Possible use in my paper</h2><p>[Definition / mechanism / expectation / competing explanation / measurement / design / context]</p><h2>Evidence from my library</h2><p><a href=\"zotero://open-pdf/library/items/3INH8I4T?page=1&amp;annotation=UIGKLL5L\">Page 1</a></p>\n<blockquote>Institutions shape incentives, and incentives influence political behavior.</blockquote>\n<p><strong>Saved source note:</strong> My interpretation: this is a proposed mechanism, not an identified effect. Revised after checking the source.</p>",
+          "text": "Reading note: Synthetic institutions and incentives\nTest Researcher (2026). Open reading in Zotero\nCreated 2026-11-20. Based on 1 saved passages/notes, not a full-paper read. Record your reading depth below.\nQuestion or chapter\n[My question, project and theme]\nReading depth\n[Full text / selected sections / abstract / cited by another work]\nAuthor's argument\n[What the author claims, and why]\nEvidence and method\n[Setting, actors, method and finding; or premises and theoretical argument]\nMy interpretation\n[Why this matters for my question, in my own words]\nConnections and limits\n[Agrees with, challenges or extends; contradictions and unresolved questions]\nPossible use in my paper\n[Definition / mechanism / expectation / competing explanation / measurement / design / context]\nEvidence from my library\nPage 1\n\nInstitutions shape incentives, and incentives influence political behavior.\n\nSaved source note: My interpretation: this is a proposed mechanism, not an identified effect. Revised after checking the source.",
+          "reviewState": "reviewed"
+        }
+      ]
+    }
+  ]
+}

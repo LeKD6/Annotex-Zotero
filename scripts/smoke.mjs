@@ -1,0 +1,30 @@
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+import vm from 'node:vm';
+const listeners = [], sections = [];
+const context = vm.createContext({ Zotero: { getMainWindows: () => [], Reader: { registerEventListener: (...args) => listeners.push(args) }, ItemPaneManager: { registerSection: section => sections.push(section) } } });
+vm.runInContext(await readFile(new URL('../content/provider.js', import.meta.url), 'utf8'), context);
+vm.runInContext(await readFile(new URL('../content/annotex.js', import.meta.url), 'utf8'), context);
+const p = context.AnnotexZotero;
+await p.init({ id: 'annotex-open@annotex.app', version: '0.4.0rc8', rootURI: 'resource://fixture/' }); await p.start();
+const ftl = await readFile(new URL('../locale/en-US/annotex-open.ftl', import.meta.url),'utf8');
+for (const [id, attr] of [[sections[0].header.l10nID,'label'],[sections[0].sidenav.l10nID,'tooltiptext']]) {
+  assert.ok(ftl.includes(id+' =\n    .'+attr+' = '), 'A plain Fluent value would replace the panel contents');
+}
+assert.match(p.markup(), /Claude \(Anthropic\)/); assert.doesNotMatch(p.markup(), /vercel/i);
+assert.equal(listeners.length, 2); assert.equal(sections.length, 1);
+assert.equal(sections[0].paneID, 'annotex-open-pane');
+assert.match(p.markup(), /Open reading note/); assert.doesNotMatch(p.markup(), /snapshot|mark selected|reasoning setting|token-budget/i); assert.equal(p.MODES.length, 2); assert.match(p.markup(), /type="password"/);
+assert.ok(!/data-annotex-enabled="true" checked/.test(p.markup()));
+const doc = { createElement: () => ({ style: {}, children: [], setAttribute() {}, addEventListener() {}, appendChild(child) { this.children.push(child); } }) };
+let row;
+p.renderSelectionPopup({ doc, params: { annotation: { text: "sample" } }, append: el => { row = el; } });
+assert.deepEqual(row.children.map(b => b.textContent), ['Define','Explain']);
+assert.equal(row.children[0].style.background, 'transparent');
+assert.equal(row.children[0].style.border, '1px solid #7c3aed');
+assert.equal(row.children[1].style.background, '#7c3aed');
+const menu = [];
+p.renderAnnotationMenu({ params: { ids: ['sample'] }, append: item => menu.push(item.label) });
+assert.deepEqual(menu, ['Annotex: Define','Annotex: Explain']);
+assert.equal(p.getAnnotationSortIndex({ position: { pageIndex: 4 } }), '00004|000000|00000');
+console.log('Registration smoke tests passed. Native UI compatibility requires the separate Zotero test.');

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Annotex gives Zotero reading notes that link back to the original passages.">
+<title>Annotex for Zotero</title>
+<style>
+  :root { color-scheme:light; font:100%/1.6 system-ui,sans-serif; background:#f7f5fc; color:#21183a; }
+  body { margin:0; }
+  main { max-width:64rem; margin:auto; padding:clamp(1.25rem,5vw,4rem); }
+  .hero { display:grid; grid-template-columns:minmax(0,1.25fr) minmax(0,1fr); gap:clamp(1rem,4vw,3rem); align-items:center; }
+  h1,h2 { font-family:Georgia,serif; line-height:1.15; }
+  h1 { font-size:clamp(2.65rem,6vw,4.9rem); margin:.4rem 0 1rem; letter-spacing:-.04em; }
+  h2 { font-size:1.7rem; margin:0 0 .5rem; }
+  p { margin:.6rem 0 1rem; }
+  .kicker { text-transform:uppercase; color:#5a367d; font-weight:750; font-size:.9rem; letter-spacing:.08em; }
+  a { color:#5b21b6; text-underline-offset:.18em; }
+  a:focus-visible { outline:3px solid #8651dd; outline-offset:4px; }
+  .download { display:inline-block; background:#5b21b6; color:#fff; border-radius:.55rem; padding:.7rem 1rem; font-weight:700; text-decoration:none; margin: .4rem 1rem .4rem 0; }
+  figure { margin:0; min-width:0; }
+  img { display:block; width:100%; max-height:31rem; object-fit:contain; border:1px solid #d9cdec; background:white; border-radius:.9rem; }
+  figcaption { font-size:.9rem; margin:.6rem 0; color:#55496c; }
+  section { border-top:1px solid #ded5ed; margin-top:2.6rem; padding-top:1.5rem; }
+  @media(max-width:45rem) { .hero {grid-template-columns:1fr} figure {max-width:24rem} }
+</style>
+</head>
+<body>
+<main>
+  <header class="hero">
+    <div>
+      <p class="kicker">Annotex for Zotero · Public beta</p>
+      <h1>Reading notes that lead back to the source.</h1>
+      <p>Turn saved highlights and comments into an editable Zotero note. Keep the author’s argument separate from your interpretation, and open the original passage when you need to check a claim.</p>
+      <a class="download" href="https://github.com/LeKD6/Annotex-Zotero/releases/download/v0.4.0rc8/annotex-open-0.4.0rc8.xpi">Download for Zotero</a>
+      <a href="https://github.com/LeKD6/Annotex-Zotero">View source on GitHub</a>
+      <p>Free and open source. Tested on macOS with Zotero 10.0.9.</p>
+    </div>
+    <figure>
+      <img src="https://lekd6.github.io/Annotex-Zotero/demo/original-passage.png" width="928" height="1200" alt="Synthetic research passage used to demonstrate a source link">
+      <figcaption><a href="https://lekd6.github.io/Annotex-Zotero/demo/">See how a reading note links back to this passage.</a> The example uses a synthetic paper.</figcaption>
+    </figure>
+  </header>
+  <section>
+    <h2>Install and start reading</h2>
+    <ol>
+      <li>Download the <code>.xpi</code>. In Zotero, open <strong>Tools → Plugins</strong> and drag the file into that window.</li>
+      <li>Select a paper and choose <strong>Open reading note</strong> in the Annotex section.</li>
+      <li>When you’re ready to write, choose <strong>Export notes and bibliography</strong>.</li>
+    </ol>
+  </section>
+  <section>
+    <h2>AI is optional</h2>
+    <p>Notes and exports need no account or API key. If you enable AI, use your own OpenAI or Anthropic API key. Define and Explain send the selected text and document title directly to your chosen provider when clicked. Summaries send the saved passages and notes for that reading. Annotex does not upload your PDF or route requests through its own service.</p>
+    <p><a href="https://github.com/LeKD6/Annotex-Zotero/releases/tag/v0.4.0rc8">Release notes and checksum</a> · <a href="https://github.com/LeKD6/Annotex-Zotero/issues">Report a problem</a></p>
+  </section>
+</main>
+</body>
+</html>

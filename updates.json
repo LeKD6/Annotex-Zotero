@@ -1,0 +1,19 @@
+{
+  "addons": {
+    "annotex-open@annotex.app": {
+      "updates": [
+        {
+          "version": "0.4.0rc8",
+          "update_link": "https://github.com/LeKD6/Annotex-Zotero/releases/download/v0.4.0rc8/annotex-open-0.4.0rc8.xpi",
+          "update_hash": "sha256:aefb9ecdd3fdfb7b5e27b46304dc90091d2aa9719871b164f8d37acf8441f158",
+          "applications": {
+            "zotero": {
+              "strict_min_version": "10.0",
+              "strict_max_version": "10.0.*"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

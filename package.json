@@ -1,0 +1,12 @@
+{
+  "name": "annotex-zotero",
+  "version": "0.4.0-rc.8",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "Account-free reading notes and source-linked writing packets for Zotero, with optional AI providers.",
+  "scripts": {
+    "check": "node --check bootstrap.js && node --check content/annotex.js && node --check content/research.js && node --check content/provider.js && node scripts/validate.mjs && node scripts/provider-test.mjs && node scripts/research-test.mjs && node scripts/smoke.mjs",
+    "build": "npm run check && node scripts/build.mjs"
+  }
+}
