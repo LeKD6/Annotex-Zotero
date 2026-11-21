@@ -34,7 +34,7 @@ AI output is saved separately and labeled unreviewed. Treat it as a draft. Check
 
 The cloud request tests use a simulated transport, not a paid model. Native results are recorded separately in the release review. Real cloud inference, provider retention, the native folder picker, other operating systems and other Zotero versions are not verified by these tests.
 
-Open `demo/index.html` for a one-minute walkthrough generated from that native packet. It traces a synthetic draft claim to a saved excerpt and the included original PDF. This is an HTML walkthrough, not a video or model-quality benchmark. Build archives use fixed timestamps and sorted file lists for reproducible packaging on the tested macOS toolchain.
+The [project page](https://annotex.app/zotero) has a short video showing Define and Explain, where to enter your model ID, and how reading notes link back to the source. It uses a sample paper and an illustrative response. The separate `demo/index.html` shows an exported note with its source link. Build archives use fixed timestamps and sorted file lists for reproducible packaging on the tested macOS toolchain.
 
 MIT license. See `THIRD_PARTY_NOTICES.md`. Zotero and installed bibliography translators are separate software with their own licenses. The original hosted Annotex app is not part of this source package. Nothing in this candidate migrates accounts, billing or hosted documents.
 

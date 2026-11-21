@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Annotex gives Zotero reading notes that link back to the original passages.">
+<meta name="description" content="Define unfamiliar terms and work through difficult passages with AI inside Zotero. Keep reading notes linked to the source.">
 <title>Annotex for Zotero</title>
 <style>
   :root { color-scheme:light; font:100%/1.6 system-ui,sans-serif; background:#f7f5fc; color:#21183a; }
   body { margin:0; }
   main { max-width:64rem; margin:auto; padding:clamp(1.25rem,5vw,4rem); }
-  .hero { display:grid; grid-template-columns:minmax(0,1.25fr) minmax(0,1fr); gap:clamp(1rem,4vw,3rem); align-items:center; }
+  .hero { max-width:50rem; }
   h1,h2 { font-family:Georgia,serif; line-height:1.15; }
   h1 { font-size:clamp(2.65rem,6vw,4.9rem); margin:.4rem 0 1rem; letter-spacing:-.04em; }
   h2 { font-size:1.7rem; margin:0 0 .5rem; }
@@ -18,11 +18,13 @@
   a { color:#5b21b6; text-underline-offset:.18em; }
   a:focus-visible { outline:3px solid #8651dd; outline-offset:4px; }
   .download { display:inline-block; background:#5b21b6; color:#fff; border-radius:.55rem; padding:.7rem 1rem; font-weight:700; text-decoration:none; margin: .4rem 1rem .4rem 0; }
-  figure { margin:0; min-width:0; }
-  img { display:block; width:100%; max-height:31rem; object-fit:contain; border:1px solid #d9cdec; background:white; border-radius:.9rem; }
-  figcaption { font-size:.9rem; margin:.6rem 0; color:#55496c; }
+  figure { margin:1rem 0 0; }
+  video { display:block; width:100%; height:auto; aspect-ratio:16/9; background:#201633; border-radius:.9rem; }
+  figcaption { margin:.6rem 0; color:#55496c; }
   section { border-top:1px solid #ded5ed; margin-top:2.6rem; padding-top:1.5rem; }
-  @media(max-width:45rem) { .hero {grid-template-columns:1fr} figure {max-width:24rem} }
+  li + li { margin-top:.55rem; }
+  code { overflow-wrap:anywhere; }
+  .steps { max-width:49rem; }
 </style>
 </head>
 <body>
@@ -30,28 +32,43 @@
   <header class="hero">
     <div>
       <p class="kicker">Annotex for Zotero · Public beta</p>
-      <h1>Reading notes that lead back to the source.</h1>
-      <p>Turn saved highlights and comments into an editable Zotero note. Keep the author’s argument separate from your interpretation, and open the original passage when you need to check a claim.</p>
+      <h1>Ask about a passage without leaving Zotero.</h1>
+      <p>Annotex brings AI into the Zotero PDF reader. When you hit an unfamiliar term, a thicket of notation, or a paragraph you’ve read three times, select the part you’re stuck on and click <strong>Define</strong> or <strong>Explain</strong>. Keep your own reading notes linked to the pages you’ll want to come back to.</p>
       <a class="download" href="https://github.com/LeKD6/Annotex-Zotero/releases/download/v0.4.0rc8/annotex-open-0.4.0rc8.xpi">Download for Zotero</a>
       <a href="https://github.com/LeKD6/Annotex-Zotero">View source on GitHub</a>
       <p>Free and open source. Tested on macOS with Zotero 10.0.9.</p>
     </div>
-    <figure>
-      <img src="https://lekd6.github.io/Annotex-Zotero/demo/original-passage.png" width="928" height="1200" alt="Synthetic research passage used to demonstrate a source link">
-      <figcaption><a href="https://lekd6.github.io/Annotex-Zotero/demo/">See how a reading note links back to this passage.</a> The example uses a synthetic paper.</figcaption>
-    </figure>
   </header>
   <section>
-    <h2>Install and start reading</h2>
+    <h2>See it in Zotero</h2>
+    <figure>
+      <video controls playsinline preload="metadata" poster="demo/annotex-video-poster.jpg" aria-label="Annotated video walkthrough of Annotex for Zotero">
+        <source src="demo/annotex-in-zotero.mp4" type="video/mp4">
+        <track src="demo/annotex-in-zotero.vtt" kind="captions" srclang="en" label="English">
+      </video>
+      <figcaption>A 25-second walkthrough using a sample paper and an illustrative answer. No live AI request was made. <a href="demo/annotex-in-zotero.mp4">Download the video</a>.</figcaption>
+    </figure>
+  </section>
+  <section class="steps">
+    <h2>Install Annotex</h2>
     <ol>
-      <li>Download the <code>.xpi</code>. In Zotero, open <strong>Tools → Plugins</strong> and drag the file into that window.</li>
-      <li>Select a paper and choose <strong>Open reading note</strong> in the Annotex section.</li>
-      <li>When you’re ready to write, choose <strong>Export notes and bibliography</strong>.</li>
+      <li>Click <strong>Download for Zotero</strong> above. Keep the downloaded <code>.xpi</code> file as it is.</li>
+      <li>In the Zotero desktop app, open <strong>Tools → Plugins</strong>. Drag the file into the Plugins window, or click the gear and choose <strong>Install Plugin From File</strong>.</li>
+      <li>Return to your library, select a paper, and open <strong>Annotex Open</strong> in the right-hand item pane.</li>
     </ol>
   </section>
-  <section>
-    <h2>AI is optional</h2>
-    <p>Notes and exports need no account or API key. If you enable AI, use your own OpenAI or Anthropic API key. Define and Explain send the selected text and document title directly to your chosen provider when clicked. Summaries send the saved passages and notes for that reading. Annotex does not upload your PDF or route requests through its own service.</p>
+  <section class="steps">
+    <h2>Set up Define and Explain</h2>
+    <ol>
+      <li>Open <strong>AI settings</strong> in Annotex and choose <strong>OpenAI</strong> or <strong>Claude (Anthropic)</strong>. Paste a key from that provider’s API account into the <strong>API key</strong> field in Zotero. The provider may charge for requests.</li>
+      <li>In <strong>Model ID from your provider</strong>, type the exact ID of the model you want. An ID is the name the API recognizes. For example, OpenAI lists GPT-6 Luna as <code>gpt-6-luna</code>. Find yours in the <a href="https://developers.openai.com/api/docs/models">OpenAI model list</a> or the <a href="https://platform.claude.com/docs/en/models/overview">Anthropic model list</a> (use the <strong>Claude API ID</strong>).</li>
+      <li>Check <strong>Enable AI and send requests when I click</strong>, then click <strong>Save AI settings</strong>. In the PDF reader, select the text you want help with and click <strong>Define</strong> or <strong>Explain</strong>.</li>
+    </ol>
+    <p>Those buttons send the selected text and document title directly to the provider you chose. Summaries send the saved passages and notes for that reading. Annotex does not upload the PDF or send requests through its own service.</p>
+  </section>
+  <section class="steps">
+    <h2>Keep a reading note</h2>
+    <p>Choose <strong>Open reading note</strong> to start an editable Zotero note from your highlights and comments. When you’re ready to write, choose <strong>Export notes and bibliography</strong>. Both work without an API key.</p>
     <p><a href="https://github.com/LeKD6/Annotex-Zotero/releases/tag/v0.4.0rc8">Release notes and checksum</a> · <a href="https://github.com/LeKD6/Annotex-Zotero/issues">Report a problem</a></p>
   </section>
 </main>
